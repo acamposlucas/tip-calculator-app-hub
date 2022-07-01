@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/sass/style.scss" />
+    <title>Frontendmentor | Tip calculator app</title>
+  </head>
+  <body>
+    <header>
+      <img src="./assets/logo.svg" alt="Splitter" />
+    </header>
+
+    <main>
+      <div class="calculator">
+        <label for="bill" class="bill-container"
+          >Bill
+          <input type="text" inputmode="numeric" pattern="[0-9]*" />
+        </label>
+
+        <div class="tipping-grid">
+          <strong>Select Tip %</strong>
+          <label for=""
+            ><input type="radio" name="tip" value="5" /><span>5%</span></label
+          >
+          <label for=""
+            ><input type="radio" name="tip" value="10" /><span>10%</span></label
+          >
+          <label for=""
+            ><input type="radio" name="tip" value="15" /><span>15%</span></label
+          >
+          <label for=""
+            ><input type="radio" name="tip" value="25" /><span>25%</span></label
+          >
+          <label for=""
+            ><input type="radio" name="tip" value="50" /><span>50%</span></label
+          >
+          <label for="">
+            <input
+              type="text"
+              inputmode="numeric"
+              pattern="[0-9]*"
+              placeholder="Custom"
+            />
+          </label>
+        </div>
+
+        <label for="bill" class="people-container"
+          >Number of people
+          <input type="text" inputmode="numeric" pattern="[0-9]*" />
+        </label>
+
+        <div class="summary">
+          <div class="wrapper">
+            <div class="wrapper-description">
+              <strong
+                >Tip amount <br />
+                <span>/ person</span></strong
+              >
+              <strong class="total">$4.27</strong>
+            </div>
+          </div>
+          <div class="wrapper">
+            <div class="wrapper-description">
+              <strong
+                >Tip amount <br />
+                <span>/ person</span></strong
+              >
+              <strong class="total">$4.27</strong>
+            </div>
+            <button>Reset</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
