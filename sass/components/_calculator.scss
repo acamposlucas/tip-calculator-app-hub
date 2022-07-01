@@ -4,14 +4,29 @@
   padding-inline: 2rem;
   padding-block: 2.5rem;
   background-color: colors.$white;
-  width: 100vw;
+  width: 100%;
   height: 100%;
   border-top-left-radius: 24px;
   border-top-right-radius: 24px;
+  display: grid;
+
+  @media (min-width: 800px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+    max-width: 920px;
+    border-bottom-left-radius: 24px;
+    border-bottom-right-radius: 24px;
+  }
+
+  .calculator-wrapper {
+    padding-block: 0.5rem;
+  }
 
   .bill-container {
+    display: block;
     color: colors.$cyan-700;
     input {
+      display: block;
       color: colors.$cyan-900;
       background-color: colors.$cyan-100;
       border-radius: 8px;
@@ -25,6 +40,7 @@
       margin-top: 0.5rem;
       padding-block: 0.5rem;
       padding-inline-end: 1.25rem;
+      width: 100%;
     }
   }
 
@@ -34,9 +50,17 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
 
+    @media (min-width: 800px) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
     strong {
       grid-column: span 2;
       color: colors.$cyan-700;
+
+      @media (min-width: 800px) {
+        grid-column: span 3;
+      }
     }
 
     label {
@@ -94,6 +118,7 @@
       color: colors.$cyan-900;
       background-color: colors.$cyan-100;
       border-radius: 8px;
+      display: block;
       text-align: right;
       background-image: url("../../assets/icon-person.svg");
       background-repeat: no-repeat;
@@ -104,6 +129,7 @@
       padding-block: 0.5rem;
       padding-inline-end: 1.25rem;
       margin-top: 0.5rem;
+      width: 100%;
     }
   }
 
@@ -113,6 +139,13 @@
     margin-top: 2.5rem;
     padding-inline: 1.5rem;
     padding-block: 2.5rem 1.25rem;
+    display: grid;
+
+    @media (min-width: 800px) {
+      grid-column: 2;
+      margin: 0;
+      height: 100%;
+    }
 
     .wrapper:first-of-type {
       margin-bottom: 1rem;
@@ -135,6 +168,11 @@
 
     strong.total {
       font-size: 1.875rem;
+      color: colors.$cyan-800;
+
+      @media (min-width: 800px) {
+        font-size: 3rem;
+      }
     }
 
     button {
@@ -147,6 +185,13 @@
       padding-block: 0.5rem;
       font-size: 1.25rem;
       margin-top: 2.25rem;
+      place-self: end;
+      cursor: pointer;
+
+      &:disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+      }
     }
   }
 }
