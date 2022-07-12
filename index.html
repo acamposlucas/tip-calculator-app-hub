@@ -22,39 +22,46 @@
               placeholder="0"
               inputmode="numeric"
               pattern="[0-9]*"
+              id="bill"
             />
           </label>
 
           <div class="tipping-grid">
             <strong>Select Tip %</strong>
-            <label for=""
-              ><input type="radio" name="tip" value="5" /><span>5%</span></label
+            <label for="5"
+              ><input type="radio" name="tip" value="5" id="5" /><span
+                >5%</span
+              ></label
             >
-            <label for=""
-              ><input type="radio" name="tip" value="10" /><span
+            <label for="10"
+              ><input type="radio" name="tip" value="10" id="10" /><span
                 >10%</span
               ></label
             >
-            <label for=""
-              ><input type="radio" name="tip" value="15" /><span
+            <label for="15"
+              ><input type="radio" name="tip" value="15" id="15" /><span
                 >15%</span
               ></label
             >
-            <label for=""
-              ><input type="radio" name="tip" value="25" /><span
-                >25%</span
-              ></label
+            <label for="25"
+              ><input
+                type="radio"
+                name="tip"
+                value="25"
+                id="25"
+                checked="checked"
+              /><span>25%</span></label
             >
-            <label for=""
-              ><input type="radio" name="tip" value="50" /><span
-                >50%</span
-              ></label
-            >
-            <label for="">
+            <label for="50"
+              ><input type="radio" name="tip" value="50" id="50" />
+              <span>50%</span>
+            </label>
+            <label for="custom">
               <input
                 type="text"
                 inputmode="numeric"
                 pattern="[0-9]*"
+                id="custom"
                 placeholder="Custom"
               />
             </label>
@@ -64,9 +71,10 @@
             >Number of people
             <input
               type="text"
-              placeholder="0"
+              placeholder="1"
               inputmode="numeric"
               pattern="[0-9]*"
+              id="people"
             />
           </label>
         </div>
@@ -78,7 +86,7 @@
                 >Tip Amount <br />
                 <span>/ person</span></strong
               >
-              <strong class="total">$0.00</strong>
+              <strong class="total" id="tipAmount">$0.00</strong>
             </div>
           </div>
           <div class="wrapper">
@@ -87,10 +95,10 @@
                 >Total <br />
                 <span>/ person</span></strong
               >
-              <strong class="total">$0.00</strong>
+              <strong class="total" id="personAmount">$0.00</strong>
             </div>
           </div>
-          <button>Reset</button>
+          <button id="reset">Reset</button>
         </div>
       </div>
     </main>
